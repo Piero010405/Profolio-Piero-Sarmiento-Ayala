@@ -1,0 +1,15 @@
+---
+interface Props {
+  title: string
+  color: string
+}
+
+const { title, color } = Astro.props
+---
+
+<span
+  class='rounded-lg border border-white/20 bg-zinc-800/80 text-default-400 p-1 flex flex-row gap-x-1 cursor-crosshair w-fit justify-center items-center'
+>
+  <div class={`size-3 ${color} rounded-full`}></div>
+  {title}
+</span>

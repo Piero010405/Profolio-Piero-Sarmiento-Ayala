@@ -1,25 +1,149 @@
 ---
+import {
+  IconBrandDiscordFilled,
+  IconBrandReact,
+  IconBrandVscode,
+  IconCode,
+  IconHash,
+} from '@tabler/icons-react'
 
+import { Birthday } from '../consts/consts.ts'
+import Role from './Role.astro'
+
+function calculateAge(birthDate: string | Date, otherDate: string | Date) {
+  birthDate = new Date(birthDate)
+  otherDate = new Date(otherDate)
+
+  let years = otherDate.getFullYear() - birthDate.getFullYear()
+
+  if (
+    otherDate.getMonth() < birthDate.getMonth() ||
+    (otherDate.getMonth() == birthDate.getMonth() &&
+      otherDate.getDate() < birthDate.getDate())
+  ) {
+    years--
+  }
+
+  return years
+}
+
+const currentAge = calculateAge(Birthday, new Date())
 ---
 
-<section class='bg-red-500 min-w-[400px] h-auto rounded-lg'>
+<section
+  class='bg-black/40 backdrop-blur-[10px] min-w-[350px] h-auto rounded-lg flex flex-col gap-y-0'
+>
   <header class='flex flex-col'>
     <img
       src='/img/banner1Gif.gif'
       alt='Banner'
-      class='w-full object-cover h-32 rounded-lg'
+      class='w-full object-cover h-32 rounded-t-lg'
     />
-    <aside class='flex flex-row mx-4'>
-      <div class='relative bottom-11'>
+
+    <aside class='flex flex-row justify-between items-start mx-4 h-14'>
+      <div class='relative bottom-11 flex flex-row'>
         <img
           src='/img/profile.webp'
           alt='Piero Sarmiento Ayala'
-          class='rounded-full size-24 border-4 border-red-500'
+          class='rounded-full size-24 border-4 border-black'
         />
-        <span></span>
+        <div
+          class='size-7 bg-green-500 border-4 border-black rounded-full relative top-14 right-6'
+        >
+        </div>
       </div>
+
+      <ul
+        class='bg-zinc-800 flex flex-row w-fit h-fit gap-x-2 px-1 py-0 rounded-lg mt-2 items-center justify-center'
+      >
+        <li class='cursor-pointer rounded-full bg-blue-400 text-white p-1'>
+          <IconBrandVscode className='size-4' />
+        </li>
+        <li class='cursor-pointer bg-green-600 rounded-lg text-black p-1'>
+          <IconCode className='size-4' />
+        </li>
+
+        <li class='cursor-pointer'>
+          <a>
+            <img
+              src='https://cdn.discordapp.com/badge-icons/2ba85e8026a8614b640c2837bcdfe21b.png'
+              class='size-8'
+              alt='Discord'
+            />
+          </a>
+        </li>
+
+        <li class='cursor-pointer bg-emerald-500 rounded-full text-black p-1'>
+          <IconHash className='size-4' />
+        </li>
+      </ul>
     </aside>
   </header>
-  <article></article>
-  <footer></footer>
+
+  <article
+    class='text-white bg-zinc-950 mx-2 mb-2 flex flex-col gap-y-4 px-3 py-2 rounded-lg'
+  >
+    <div class='border-b border-white/20 tracking-tight pb-2'>
+      <h1 class='text-lg'>Piero Sarmiento Ayala</h1>
+      <span class='text-sm'>@Pipo05</span>
+    </div>
+
+    <div class='text-xs'>
+      <h2 class='text-xs font-bold'>ABOUT ME</h2>
+      <p class='flex flex-row gap-x-1'>
+        ✰ {currentAge}yo ·
+        <span>
+          <img src='/img/peruFlag.webp' alt='peruvians flag' class='size-4' />
+        </span> 🇵🇪
+      </p>
+      <p>✰ Software engineer student</p>
+    </div>
+
+    <div class='text-xs'>
+      <h2 class='font-bold'>MEMBER SINCE</h2>
+      <p class='flex flex-row gap-x-1 items-center'>
+        <IconBrandDiscordFilled className='size-4' /> 19, 2020
+      </p>
+    </div>
+
+    <div class='text-xs'>
+      <h2 class='font-bold'>PLAYING A GAME</h2>
+      <div class='flex flex-row items-center gap-x-5 mt-1'>
+        <IconBrandReact className='size-10 text-sky-500 ml-3' />
+        <span>
+          <strong>Visual Studio Code</strong>
+          <p class='tracking-tight'>Editing ProfileCard.tsx</p>
+          <p class='tracking-tight'>At 116:66/177 | Filesize 5.66KB</p>
+          <p class='tracking-tight'>12:44:12 elapsed</p>
+        </span>
+      </div>
+    </div>
+
+    <div class='text-xs flex flex-col gap-y-1'>
+      <h2 class='font-bold'>ROLES</h2>
+      <div class='flex flex-row gap-1'>
+        <Role title='JavaScript' color='bg-amber-500' />
+        <Role title='TypeScript' color='bg-blue-500' />
+        <Role title='Python' color='bg-yellow-500' />
+      </div>
+      <div class='flex flex-row gap-1'>
+        <Role title='C++' color='bg-sky-500' />
+        <Role title='C#' color='bg-violet-500' />
+      </div>
+    </div>
+
+    <div class='text-xs'>
+      <h2 class='font-bold'>NOTE</h2>
+      <p>Website made with Astro and TailwindCSS.</p>
+    </div>
+    <footer>
+      <form>
+        <input
+          class='bg-transparent border border-white/20 px-3 py-2 rounded-md placeholder:text-neutral-600 text-xs w-full focus:bg-inherit focus:outline-none'
+          type='text'
+          placeholder='Message @pipo05'
+        />
+      </form>
+    </footer>
+  </article>
 </section>
