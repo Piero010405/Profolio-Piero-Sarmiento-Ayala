@@ -31,7 +31,7 @@ const currentAge = calculateAge(Birthday, new Date())
 ---
 
 <section
-  class='bg-black/40 backdrop-blur-[10px] min-w-[350px] h-auto rounded-lg flex flex-col gap-y-0'
+  class='bg-black/10 backdrop-filter backdrop-blur-lg shadow-lg min-w-[300px] h-auto rounded-lg flex flex-col gap-y-0'
 >
   <header class='flex flex-col'>
     <img
@@ -56,14 +56,31 @@ const currentAge = calculateAge(Birthday, new Date())
       <ul
         class='bg-zinc-800 flex flex-row w-fit h-fit gap-x-2 px-1 py-0 rounded-lg mt-2 items-center justify-center'
       >
-        <li class='cursor-pointer rounded-full bg-blue-400 text-white p-1'>
+        <li
+          class='cursor-pointer rounded-full bg-blue-400 text-white p-1 group flex justify-center items-center flex-row'
+        >
           <IconBrandVscode className='size-4' />
-        </li>
-        <li class='cursor-pointer bg-green-600 rounded-lg text-black p-1'>
-          <IconCode className='size-4' />
+          <span
+            class='absolute w-auto p-2 m-2 top-24 min-w-max rounded-md shadow-md text-white bg-zinc-800 text-xs font-bold transition-all duration-0 scale-0 origin-left group-hover:scale-100'
+          >
+            VSCode addict
+          </span>
         </li>
 
-        <li class='cursor-pointer'>
+        <li
+          class='cursor-pointer bg-green-600 rounded-lg text-black p-1 group flex justify-center items-center flex-row'
+        >
+          <IconCode className='size-4' />
+          <span
+            class='absolute w-auto p-2 m-2 top-24 min-w-max rounded-md shadow-md text-white bg-zinc-800 text-xs font-bold transition-all duration-0 scale-0 origin-left group-hover:scale-100'
+          >
+            Active Developer
+          </span>
+        </li>
+
+        <li
+          class='cursor-pointer group flex justify-center items-center flex-row'
+        >
           <a>
             <img
               src='https://cdn.discordapp.com/badge-icons/2ba85e8026a8614b640c2837bcdfe21b.png'
@@ -71,10 +88,22 @@ const currentAge = calculateAge(Birthday, new Date())
               alt='Discord'
             />
           </a>
+          <span
+            class='absolute w-auto p-2 m-2 top-20 min-w-max rounded-md shadow-md text-white bg-zinc-800 text-xs font-bold transition-all duration-0 scale-0 origin-left group-hover:scale-100'
+          >
+            Subscriber since Nov 12, <br /> 2023
+          </span>
         </li>
 
-        <li class='cursor-pointer bg-emerald-500 rounded-full text-black p-1'>
+        <li
+          class='cursor-pointer bg-emerald-500 rounded-full text-black p-1 group flex justify-center items-center flex-row'
+        >
           <IconHash className='size-4' />
+          <span
+            class='absolute w-auto p-2 m-2 top-20 min-w-max rounded-md shadow-md text-white bg-zinc-800 text-xs font-bold transition-all duration-0 scale-0 origin-left group-hover:scale-100'
+          >
+            Originally known as <br /> Pipo05
+          </span>
         </li>
       </ul>
     </aside>

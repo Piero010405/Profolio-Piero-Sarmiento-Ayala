@@ -1,0 +1,43 @@
+---
+import {
+  IconBrandGithubFilled,
+  IconBrandLinkedin,
+  IconFileCv,
+} from '@tabler/icons-react'
+---
+
+<section class='hidden lg:block'>
+  <ul
+    class='bg-white/10 backdrop-filter backdrop-blur-lg shadow-lg flex flex-col gap-y-5 border border-white/20 rounded-full p-2'
+  >
+    <li
+      class='rounded-full p-2 transition ease-in cursor-pointer text-white hover:scale-125'
+    >
+      <a href='https://github.com/Piero010405' target='_blank' rel='noopener'>
+        <IconBrandGithubFilled className='size-7'/>
+      </a>
+    </li>
+    <li
+      class='rounded-full p-2 transition ease-in cursor-pointer text-white hover:scale-125'
+    >
+      <a
+        href='https://www.linkedin.com/in/d-alessandro-del-piero-sarmiento-ayala-a70669301/'
+        target='_blank'
+        rel='noopener'
+      >
+        <IconBrandLinkedin className='size-7'/>
+      </a>
+    </li>
+    <li
+      class='rounded-full p-2 transition ease-in cursor-pointer text-white hover:scale-125'
+    >
+      <a
+        href='/documents/PieroSarmientoAyalaCV.pdf'
+        target='_blank'
+        rel='noopener'
+      >
+        <IconFileCv className='size-7'/>
+      </a>
+    </li>
+  </ul>
+</section>
