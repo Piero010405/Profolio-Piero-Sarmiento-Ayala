@@ -1,14 +1,91 @@
 ---
+import {
+  IconBrandAstro,
+  IconBrandCSharp,
+  IconBrandCpp,
+  IconBrandNextjs,
+  IconBrandTailwind,
+  IconBrandTypescript,
+  IconFileCv,
+} from '@tabler/icons-react'
 
+import GitHub from './Icons/GitHub.astro'
+import Html from './Icons/Html.astro'
+import Css from './Icons/Css.astro'
+import Js from './Icons/Js.astro'
+import React from './Icons/React.astro'
+import Net from './Icons/Net.astro'
 ---
 
-<section class='grid grid-cols-4 gap-1'>
-  <div class='border border-white/20 size-32'></div>
-  <div class='border border-white/20 size-32'></div>
-  <div class='border border-white/20 size-32'></div>
-  <div class='border border-white/20 size-32'></div>
-  <div class='border border-white/20 size-32'></div>
-  <div class='border border-white/20 size-32'></div>
-  <div class='border border-white/20 size-32'></div>
-  <div class='border border-white/20 size-32'></div>
+<section
+  class='grid grid-cols-1 md:grid-cols-4 auto-rows-auto gap-10 mx-auto text-white'
+>
+  <div class='border border-white/20 p-4 rounded-lg md:row-span-2'>
+    <h1>Projects</h1>
+    <p>Here you can find some of the projects I have been working on.</p>
+  </div>
+
+  <div class='border border-white/20 p-4 rounded-lg'>
+    <GitHub />
+  </div>
+
+  <div class='border border-white/20 p-4 rounded-lg'>
+    <img src='/img/codeGif.gif' alt='Coding gif' />
+  </div>
+
+  <div class='border border-white/20 p-4 rounded-lg md:row-span-2'>
+    <h1>Experience</h1>
+  </div>
+
+  <div
+    class='border border-white/20 p-4 rounded-lg md:row-span-2 md:col-span-2'
+  >
+    <h1>👋 Hi, I'm Piero Sarmiento Ayala</h1>
+    <span> Software engineer student </span>
+    <p>
+      <strong>Frontend developer</strong> with a great desire to work and learn in
+      technologies.
+    </p>
+  </div>
+
+  <div class='border border-white/20 p-4 rounded-lg'>
+    <span> +2 </span>
+    <p>years of experience</p>
+  </div>
+
+  <div class='border border-white/20 p-4 rounded-lg md:row-span-3'>
+    <h1>Contact me</h1>
+  </div>
+
+  <div
+    class='border border-white/20 p-4 rounded-lg md:col-span-2 md:row-span-2'
+  >
+    <h1>
+      Some of the <strong>technologies</strong> I work with
+    </h1>
+    <slide>
+      <Html />
+      <Css />
+      <Js />
+      <React />
+      <Net />
+      <IconBrandAstro />
+      <IconBrandNextjs />
+      <IconBrandTypescript />
+      <IconBrandCpp />
+      <IconBrandCSharp />
+      <IconBrandTailwind />
+    </slide>
+  </div>
+
+  <div class='border border-white/20 p-4 rounded-lg md:row-span-2'>
+    <span> Here me CV </span>
+    <a
+      href='/documents/PieroSarmientoAyalaCV.pdf'
+      target='_blank'
+      rel='noopener'
+    >
+      <IconFileCv className='size-7' />
+    </a>
+  </div>
 </section>
