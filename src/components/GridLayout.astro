@@ -6,7 +6,9 @@ import {
   IconBrandNextjs,
   IconBrandTailwind,
   IconBrandTypescript,
+  IconCircleArrowRightFilled,
   IconFileCv,
+  IconMailFilled,
 } from '@tabler/icons-react'
 
 import GitHub from './Icons/GitHub.astro'
@@ -14,78 +16,303 @@ import Html from './Icons/Html.astro'
 import Css from './Icons/Css.astro'
 import Js from './Icons/Js.astro'
 import React from './Icons/React.astro'
-import Net from './Icons/Net.astro'
 ---
 
 <section
-  class='grid grid-cols-1 md:grid-cols-4 auto-rows-auto gap-10 mx-auto text-white'
+  class='grid grid-cols-1 md:grid-cols-4 auto-rows-auto gap-5 m-2 h-fit text-white'
 >
-  <div class='border border-white/20 p-4 rounded-lg md:row-span-2'>
-    <h1>Projects</h1>
-    <p>Here you can find some of the projects I have been working on.</p>
+  <div
+    class='p-4 rounded-lg md:row-span-2 bg-gradient-to-l from-sky-600 to-emerald-400 flex flex-col gap-y-4 justify-center'
+  >
+    <h1 class='text-left font-bold text-2xl tracking-tight'>Projects</h1>
+    <p class='text-pretty text-sm leading-tight'>
+      Here you can find some of the projects I have been working on.
+    </p>
+    <a class='cursor-pointer'>
+      <IconCircleArrowRightFilled className='size-12' />
+    </a>
   </div>
 
-  <div class='border border-white/20 p-4 rounded-lg'>
-    <GitHub />
+  <div class='justify-center items-center cursor-pointer'>
+    <a
+      href='https://github.com/Piero010405'
+      target='_blank'
+      rel='noopener'
+      class='p-4 rounded-lg bg-gradient-to-r from-gray-700 via-gray-900 to-black flex hover:scale-[103%] transition duration-300 ease-in-out'
+    >
+      <GitHub />
+    </a>
   </div>
 
-  <div class='border border-white/20 p-4 rounded-lg'>
-    <img src='/img/codeGif.gif' alt='Coding gif' />
-  </div>
-
-  <div class='border border-white/20 p-4 rounded-lg md:row-span-2'>
-    <h1>Experience</h1>
+  <div class='rounded-lg'>
+    <img
+      class='w-full h-full object-cover rounded-lg'
+      src='/img/codeGif.gif'
+      alt='Coding gif'
+    />
   </div>
 
   <div
-    class='border border-white/20 p-4 rounded-lg md:row-span-2 md:col-span-2'
+    class='px-4 py-1 rounded-lg md:row-span-2 bg-gradient-to-br from-yellow-500 to-purple-600 flex flex-col justify-between'
   >
-    <h1>👋 Hi, I'm Piero Sarmiento Ayala</h1>
-    <span> Software engineer student </span>
-    <p>
+    <h1 class='font-bold text-2xl tracking-tight'>Experience</h1>
+    <aside class='flex flex-row gap-x-3'>
+      <div class='flex flex-col justify-center items-center top-2 relative'>
+        <div class='bg-white rounded-full size-4'></div>
+        <div class='h-16 w-fit border border-white'></div>
+      </div>
+      <div class='felx flex-col justify-center items-center'>
+        <span class='text-pretty text-base font-bold tracking-tight'
+          >Trk Publicidad</span
+        >
+        <p class='text-sm text-pretty tracking-tight text-neutral-300'>
+          Frontend junior developer
+        </p>
+        <span
+          class='text-sm font-bold bg-white/20 border border-white/20 rounded-full px-1'
+          >2022 - 2023</span
+        >
+      </div>
+    </aside>
+    <img src='/img/totoro2.gif' alt='Totoro gif' />
+  </div>
+
+  <div
+    class='p-4 rounded-lg md:row-span-2 md:col-span-2 bg-gradient-to-l from-gray-700 via-gray-900 to-black flex flex-col gap-y-2'
+  >
+    <h1 class='font-bold text-3xl tracking-tight text-wrap'>
+      👋 Hi, I'm Piero Sarmiento Ayala
+    </h1>
+    <span class='text-neutral-300 text-sm tracking-tight'>
+      Software engineer student
+    </span>
+    <p class='text-pretty text-sm leading-tight'>
       <strong>Frontend developer</strong> with a great desire to work and learn in
       technologies.
     </p>
   </div>
 
-  <div class='border border-white/20 p-4 rounded-lg'>
-    <span> +2 </span>
-    <p>years of experience</p>
-  </div>
-
-  <div class='border border-white/20 p-4 rounded-lg md:row-span-3'>
-    <h1>Contact me</h1>
+  <div
+    class='p-4 rounded-lg bg-gradient-to-b from-fuchsia-900 to-purple-600 flex flex-col justify-center items-center'
+  >
+    <span class='font-bold text-6xl'> +2 </span>
+    <p class='uppercase text-center font-semibold leading-tight'>
+      years of experience
+    </p>
   </div>
 
   <div
-    class='border border-white/20 p-4 rounded-lg md:col-span-2 md:row-span-2'
+    class='rounded-lg md:row-span-3 bg-gradient-to-r from-violet-600 to-indigo-600'
   >
-    <h1>
-      Some of the <strong>technologies</strong> I work with
-    </h1>
-    <slide>
-      <Html />
-      <Css />
-      <Js />
-      <React />
-      <Net />
-      <IconBrandAstro />
-      <IconBrandNextjs />
-      <IconBrandTypescript />
-      <IconBrandCpp />
-      <IconBrandCSharp />
-      <IconBrandTailwind />
+    <!-- <h1 class='font-bold text-2xl tracking-tight'>Contact me</h1> -->
+    <img
+      class='w-full h-full object-cover rounded-lg'
+      src='/img/yoda.gif'
+      alt='Coding gif'
+    />
+  </div>
+
+  <div
+    class='p-4 rounded-lg md:col-span-2 md:row-span-2 bg-gradient-to-br from-emerald-500 to-purple-600 flex flex-col gap-y-1 justify-center'
+  >
+    <h1 class='text-left font-bold text-2xl tracking-tight'>Technologies</h1>
+
+    <slide class='scroller'>
+      <ul class='tag-list scroller__inner'>
+        <li>
+          <Html />
+        </li>
+        <li>
+          <Css />
+        </li>
+        <li>
+          <Js />
+        </li>
+        <li>
+          <IconBrandTypescript className='size-10' />
+        </li>
+        <li>
+          <IconBrandCpp className='size-10' />
+        </li>
+        <li>
+          <IconBrandCSharp className='size-10' />
+        </li>
+        <li>
+          <React />
+        </li>
+        <li>
+          <IconBrandNextjs className='size-10' />
+        </li>
+        <li>
+          <IconBrandAstro className='size-10' />
+        </li>
+        <li>
+          <IconBrandTailwind className='size-10' />
+        </li>
+      </ul>
+    </slide>
+    <slide class='scroller' data-direction='right'>
+      <ul class='tag-list scroller__inner'>
+        <li>
+          <Html />
+        </li>
+        <li>
+          <Css />
+        </li>
+        <li>
+          <Js />
+        </li>
+        <li>
+          <IconBrandTypescript className='size-10' />
+        </li>
+        <li>
+          <IconBrandCpp className='size-10' />
+        </li>
+        <li>
+          <IconBrandCSharp className='size-10' />
+        </li>
+        <li>
+          <React />
+        </li>
+        <li>
+          <IconBrandNextjs className='size-10' />
+        </li>
+        <li>
+          <IconBrandAstro className='size-10' />
+        </li>
+        <li>
+          <IconBrandTailwind className='size-10' />
+        </li>
+      </ul>
     </slide>
   </div>
 
-  <div class='border border-white/20 p-4 rounded-lg md:row-span-2'>
-    <span> Here me CV </span>
+  <div class='cursor-pointer flex justify-center items-center'>
     <a
       href='/documents/PieroSarmientoAyalaCV.pdf'
       target='_blank'
       rel='noopener'
+      class='p-4 rounded-lg bg-gradient-to-l from-purple-900 to-indigo-400 flex hover:scale-[103%] transition duration-300 ease-in-out'
     >
-      <IconFileCv className='size-7' />
+      <IconFileCv className='size-20' />
+    </a>
+  </div>
+
+  <div class='cursor-pointer flex justify-center items-center'>
+    <a
+      href='mailto:psarmientoayala@gmail.com'
+      target='_blank'
+      rel='noopener'
+      class='p-4 rounded-lg bg-gradient-to-br from-pink-700 to-purple-600 flex hover:scale-[103%] transition duration-300 ease-in-out'
+    >
+      <IconMailFilled className='size-20' />
     </a>
   </div>
 </section>
+<style>
+  :root {
+    --clr-primary-400: hsl(215, 25%, 27%);
+    --clr-primary-900: hsl(218, 33%, 9%);
+  }
+  .scroller {
+    max-width: 600px;
+  }
+
+  .scroller__inner {
+    padding-block: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .scroller[data-animated='true'] {
+    overflow: hidden;
+    -webkit-mask: linear-gradient(
+      90deg,
+      transparent,
+      white 20%,
+      white 80%,
+      transparent
+    );
+    mask: linear-gradient(
+      90deg,
+      transparent,
+      white 20%,
+      white 80%,
+      transparent
+    );
+  }
+
+  .scroller[data-animated='true'] .scroller__inner {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll var(--_animation-duration, 40s)
+      var(--_animation-direction, forwards) linear infinite;
+  }
+
+  .scroller[data-direction='right'] {
+    --_animation-direction: reverse;
+  }
+
+  .scroller[data-direction='left'] {
+    --_animation-direction: forwards;
+  }
+
+  .scroller[data-speed='fast'] {
+    --_animation-duration: 20s;
+  }
+
+  .scroller[data-speed='slow'] {
+    --_animation-duration: 60s;
+  }
+
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
+
+  .tag-list {
+    margin: 0;
+    padding-inline: 0;
+    list-style: none;
+  }
+
+  .tag-list li {
+    padding: 0.5rem;
+    background: var(--clr-primary-400);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-900);
+  }
+</style>
+<script>
+  const scrollers = document.querySelectorAll('.scroller')
+
+  // If a user hasn't opted in for recuded motion, then we add the animation
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    addAnimation()
+  }
+
+  function addAnimation() {
+    scrollers.forEach((scroller) => {
+      // add data-animated="true" to every `.scroller` on the page
+      scroller.setAttribute('data-animated', true)
+
+      // Make an array from the elements within `.scroller-inner`
+      const scrollerInner = scroller.querySelector('.scroller__inner')
+      if (!scrollerInner) return
+      const scrollerContent = Array.from(scrollerInner.children)
+
+      // For each item in the array, clone it
+      // add aria-hidden to it
+      // add it into the `.scroller-inner`
+      scrollerContent.forEach((item) => {
+        const duplicatedItem = item.cloneNode(true)
+        duplicatedItem.setAttribute('aria-hidden', true)
+        scrollerInner.appendChild(duplicatedItem)
+      })
+    })
+  }
+</script>
