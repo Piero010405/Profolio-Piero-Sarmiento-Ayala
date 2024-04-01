@@ -19,16 +19,20 @@ import React from './Icons/React.astro'
 ---
 
 <section
-  class='grid grid-cols-2 md:grid-cols-4 auto-rows-auto gap-5 m-5 xl:m-2 h-fit text-white'
+  class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 auto-rows-auto gap-5 m-5 xl:m-2 h-full text-white'
 >
   <div
     class='p-4 rounded-lg md:row-span-2 bg-gradient-to-l from-sky-600 to-emerald-400 flex flex-col gap-y-4 justify-center'
   >
-    <h1 class='text-left font-bold text-2xl tracking-tight'>Projects</h1>
+    <h1 class='text-left font-bold text-lg sm:text-2xl tracking-tight'>
+      Projects
+    </h1>
     <p class='text-pretty text-sm leading-tight'>
       Here you can find some of the projects I have been working on.
     </p>
-    <a class='cursor-pointer'>
+    <a
+      class='cursor-pointer hover:scale-[103%] transition-all duration-300 ease-in-out'
+    >
       <IconCircleArrowRightFilled className='size-12' />
     </a>
   </div>
@@ -55,7 +59,7 @@ import React from './Icons/React.astro'
   <div
     class='px-4 py-1 rounded-lg md:row-span-2 bg-gradient-to-br from-yellow-500 to-purple-600 flex flex-col justify-between'
   >
-    <h1 class='font-bold text-2xl tracking-tight'>Experience</h1>
+    <h1 class='font-bold text-lg sm:text-2xl tracking-tight'>Experience</h1>
     <aside class='flex flex-row gap-x-3'>
       <div class='flex flex-col justify-center items-center top-2 relative'>
         <div class='bg-white rounded-full size-4'></div>
@@ -69,7 +73,7 @@ import React from './Icons/React.astro'
           Frontend junior developer
         </p>
         <span
-          class='text-sm font-bold bg-white/20 border border-white/20 rounded-full px-1'
+          class='text-xs sm:text-sm font-bold bg-white/20 border border-white/20 rounded-full px-1'
           >2022 - 2023</span
         >
       </div>
@@ -80,7 +84,7 @@ import React from './Icons/React.astro'
   <div
     class='p-4 rounded-lg md:row-span-2 md:col-span-2 bg-gradient-to-l from-gray-700 via-gray-900 to-black flex flex-col gap-y-2'
   >
-    <h1 class='font-bold text-3xl tracking-tight text-wrap'>
+    <h1 class='font-bold text-2xl sm:text-3xl tracking-tight text-wrap'>
       👋 Hi, I'm Piero Sarmiento Ayala
     </h1>
     <span class='text-neutral-300 text-sm tracking-tight'>
@@ -104,7 +108,6 @@ import React from './Icons/React.astro'
   <div
     class='rounded-lg md:row-span-3 bg-gradient-to-r from-violet-600 to-indigo-600'
   >
-    <!-- <h1 class='font-bold text-2xl tracking-tight'>Contact me</h1> -->
     <img
       class='w-full h-full object-cover rounded-lg'
       src='/img/yoda.gif'
@@ -115,7 +118,9 @@ import React from './Icons/React.astro'
   <div
     class='p-4 rounded-lg md:col-span-2 md:row-span-2 bg-gradient-to-br from-emerald-500 to-purple-600 flex flex-col gap-y-1 justify-center'
   >
-    <h1 class='text-left font-bold text-2xl tracking-tight'>Technologies</h1>
+    <h1 class='text-lg sm:text-2xl text-left font-bold tracking-tight'>
+      Technologies
+    </h1>
 
     <slide class='scroller'>
       <ul class='tag-list scroller__inner'>
@@ -192,7 +197,7 @@ import React from './Icons/React.astro'
       href='/documents/PieroSarmientoAyalaCV.pdf'
       target='_blank'
       rel='noopener'
-      class='p-4 rounded-lg bg-gradient-to-l from-purple-900 to-indigo-400 flex hover:scale-[103%] transition duration-300 ease-in-out'
+      class='p-7 rounded-lg bg-gradient-to-l from-purple-900 to-indigo-400 flex hover:scale-[103%] transition duration-300 ease-in-out'
     >
       <IconFileCv className='size-20' />
     </a>
@@ -203,12 +208,13 @@ import React from './Icons/React.astro'
       href='mailto:psarmientoayala@gmail.com'
       target='_blank'
       rel='noopener'
-      class='p-4 rounded-lg bg-gradient-to-br from-pink-700 to-purple-600 flex hover:scale-[103%] transition duration-300 ease-in-out'
+      class='p-7 rounded-lg bg-gradient-to-br from-pink-700 to-purple-600 flex hover:scale-[103%] transition duration-300 ease-in-out'
     >
       <IconMailFilled className='size-20' />
     </a>
   </div>
 </section>
+
 <style>
   :root {
     --clr-primary-400: hsl(215, 25%, 27%);
@@ -298,7 +304,7 @@ import React from './Icons/React.astro'
   function addAnimation() {
     scrollers.forEach((scroller) => {
       // add data-animated="true" to every `.scroller` on the page
-      scroller.setAttribute('data-animated', true)
+      scroller.setAttribute('data-animated', 'true')
 
       // Make an array from the elements within `.scroller-inner`
       const scrollerInner = scroller.querySelector('.scroller__inner')
@@ -310,8 +316,10 @@ import React from './Icons/React.astro'
       // add it into the `.scroller-inner`
       scrollerContent.forEach((item) => {
         const duplicatedItem = item.cloneNode(true)
-        duplicatedItem.setAttribute('aria-hidden', true)
-        scrollerInner.appendChild(duplicatedItem)
+        if (duplicatedItem instanceof Element) {
+          duplicatedItem.setAttribute('aria-hidden', 'true')
+          scrollerInner.appendChild(duplicatedItem)
+        }
       })
     })
   }
