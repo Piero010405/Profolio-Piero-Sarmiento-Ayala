@@ -1,16 +1,8 @@
 ---
+import GridLayout from '../components/GridLayout.astro'
 import Layout from '../layouts/Layout.astro'
-import ProfileCard from '../components/ProfileCard.astro'
-import Desktop from '../components/Desktop.astro'
-import SocialBar from '../components/SocialBar.astro'
 ---
 
 <Layout title='Piero Sarmiento | Frontend Developer'>
-  <main
-    class='lg:max-w-[1100px] flex items-center justify-center flex-row gap-x-3 mx-auto h-full'
-  >
-    <SocialBar />
-    <Desktop />
-    <ProfileCard />
-  </main>
+  <GridLayout />
 </Layout>
