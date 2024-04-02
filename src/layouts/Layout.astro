@@ -20,17 +20,17 @@ const { title } = Astro.props
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
-    <!-- <ViewTransitions /> -->
+    <ViewTransitions />
   </head>
   <body
-    class='flex items-center justify-center min-h-screen content-center'
+    class='flex justify-center min-h-screen content-center'
     style='
     background-color: rgb(0, 0, 0);
     background-image: radial-gradient(at 57% 28%, rgb(7, 89, 133) 0, transparent 6%), radial-gradient(at 73% 44%, rgb(37, 99, 235) 0, transparent 20%), radial-gradient(at 19% 50%, rgb(6, 95, 70) 0, transparent 38%), radial-gradient(at 98% 37%, rgb(129, 140, 248) 0, transparent 17%), radial-gradient(at 32% 65%, rgb(87, 83, 78) 0, transparent 17%);
   '
   >
     <main
-      class='lg:max-w-[1100px] flex items-center justify-center flex-row gap-x-3 mx-auto h-full'
+      class='lg:max-w-[1200px] flex justify-center flex-row gap-x-3 mx-auto h-full'
     >
       <SocialBar />
       <Desktop>
