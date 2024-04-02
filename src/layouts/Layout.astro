@@ -3,6 +3,7 @@ import { ViewTransitions } from 'astro:transitions'
 import Desktop from '../components/Desktop.astro'
 import ProfileCard from '../components/ProfileCard.astro'
 import SocialBar from '../components/SocialBar.astro'
+import { Toaster } from 'sonner'
 
 interface Props {
   title: string
@@ -32,6 +33,7 @@ const { title } = Astro.props
     <main
       class='lg:max-w-[1200px] flex justify-center flex-row gap-x-3 mx-auto h-full'
     >
+      <Toaster richColors client:only/>
       <SocialBar />
       <Desktop>
         <slot />
