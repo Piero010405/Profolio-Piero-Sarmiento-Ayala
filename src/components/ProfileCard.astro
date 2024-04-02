@@ -5,6 +5,7 @@ import {
   IconBrandVscode,
   IconCode,
   IconHash,
+  IconSend2,
 } from '@tabler/icons-react'
 
 import { Birthday } from '../consts/consts.ts'
@@ -167,12 +168,16 @@ const currentAge = calculateAge(Birthday, new Date())
       <p>Website made with Astro and TailwindCSS.</p>
     </div>
     <footer>
-      <form>
+      <form class='w-full flex flex-row'>
         <input
-          class='bg-transparent border border-white/20 px-3 py-2 rounded-md placeholder:text-neutral-600 text-xs w-full focus:bg-inherit focus:outline-none'
+          class='bg-transparent border border-white/20 px-3 py-2 rounded-l-md placeholder:text-neutral-600 text-xs focus:bg-inherit focus:outline-none w-full'
           type='text'
           placeholder='Message @pipo05'
         />
+        <button
+          class='border border-white/20 px-3 py-2 rounded-r-md bg-zinc-950'
+          ><IconSend2 />
+        </button>
       </form>
     </footer>
   </article>

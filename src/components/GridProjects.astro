@@ -5,6 +5,7 @@ import {
   IconCircleArrowLeftFilled,
   IconExternalLink,
 } from '@tabler/icons-react'
+import Role from './Role.astro'
 ---
 
 <section
@@ -44,21 +45,37 @@ import {
     />
   </div>
 
-  <div class='rounded-lg md:col-span-2'>
+  <div class='rounded-lg md:col-span-2 group relative'>
     <img
       class='w-full h-full object-cover rounded-lg'
       src='/img/projectX.webp'
       alt='Image of my twiter clone'
     />
+    <div
+      class='rounded-lg absolute left-0 bottom-0 bg-black/70 backdrop:blur-sm overflow-hidden w-full h-0 flex items-center justify-center flex-col group-hover:h-full transition-all duration-300 ease-linear'
+    >
+      <p class='p-4 text-sm tracking-tight'>
+        Twitter clone, with authentication, PostgreSQL database, and optimistic
+        updates.
+      </p>
+      <div
+        class='grid grid-cols-2 gap-2 justify-center items-center text-sm p-4'
+      >
+        <Role title='NextJs' color='bg-black' />
+        <Role title='TailwindCSS' color='bg-sky-500' />
+        <Role title='React' color='bg-blue-500' />
+        <Role title='SupaBase' color='bg-green-500' />
+      </div>
+    </div>
   </div>
 
   <div
-    class='rounded-lg md:row-span-1 bg-gradient-to-tl from-red-600 via-violet-800 to-purple-600 flex flex-col justify-center items-center gap-y-5'
+    class='rounded-lg md:row-span-1 bg-gradient-to-tl from-red-600 via-violet-800 to-purple-600 flex flex-col justify-center items-center gap-y-5 p-2'
   >
     <span
       class='bg-white/20 backdrop:blur-sm p-1 rounded-lg border border-white/20 font-bold tracking-tight'
     >
-      Clon de Twitter
+      Twitter Clone
     </span>
     <a
       href='https://github.com/Piero010405/Twitter-Clone'
@@ -83,16 +100,33 @@ import {
     </a>
   </div>
 
-  <div class='rounded-lg md:col-span-2'>
+  <div class='rounded-lg md:col-span-2 group relative'>
     <img
       class='w-fit h-fit object-cover rounded-lg'
       src='/img/projectTRK.webp'
       alt='Image of the landign page of TRK Publicidad'
     />
+    <div
+      class='rounded-lg absolute left-0 bottom-0 bg-black/70 backdrop:blur-sm overflow-hidden w-full h-0 flex items-center justify-center flex-col group-hover:h-full transition-all duration-300 ease-linear'
+    >
+      <p class='p-4 text-sm tracking-tight'>
+        Customized landing page for the client with email and routing service.
+        <strong>Freelancer</strong>
+      </p>
+      <div
+        class='grid grid-cols-2 gap-2 justify-center items-center text-sm p-4'
+      >
+        <Role title='Astro' color='bg-amber-500' />
+        <Role title='CSS' color='bg-sky-500' />
+        <Role title='React' color='bg-blue-500' />
+        <Role title='Resend' color='bg-emerald-500' />
+        <Role title='Node' color='bg-green-700' />
+      </div>
+    </div>
   </div>
 
   <div
-    class='rounded-lg md:row-span-1 bg-gradient-to-bl from-teal-400 to-yellow-200 flex flex-col justify-center items-center gap-y-5'
+    class='rounded-lg md:row-span-1 bg-gradient-to-bl from-teal-400 to-yellow-200 flex flex-col justify-center items-center gap-y-5 p-2'
   >
     <span
       class='bg-white/20 backdrop:blur-sm p-1 rounded-lg border border-white/20 font-bold tracking-tight'
